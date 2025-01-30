@@ -55,4 +55,50 @@ public String reverse(String str)
   }
   return s;
 }
+  public String noCapitals(String sWord){
+  String s = new String(); 
+  for(int i = 0; i < sWord.length(); i++){
+      char c = sWord.charAt(i);
+    
+    if(Character.isUpperCase(c)){
+      s += Character.toLowerCase(c);
+    }
+    else{
+      s +=c;
+    }
+  }
+  return s;
+}
+public String noSpaces(String sWord){
+  String s ="";
+  for(int i = 0; i < sWord.length(); i++){
+    char currentChar = sWord.charAt(i);
+  
+    if(currentChar != ' '){
+      s+= currentChar; 
+    
+  }
+}
+return s;
+}
+public int numLetters(String sString){
+  int count = 0;
+  for(int i = 0; i < sString.length(); i++){
+       char currentChar = sString.charAt(i);
+  if(Character.isLetter(currentChar)){
+    count++;
+  }
+}
+return count;
+}
+public String onlyLetters(String sString){
+  String s ="";
+  for(int i = 0; i < sString.length(); i++){
+       char currentChar = sString.charAt(i);
+  if(Character.isLetter(currentChar)){
+    s+=currentChar;
+    }
+  }
+return s;
+}
 }
