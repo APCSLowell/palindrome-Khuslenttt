@@ -39,6 +39,7 @@ public boolean palindrome(String word)
 {
   //your code here
 String s = new String();
+s = letters(word).toLowerCase();
 for(int i = word.length(); i > 0; i--){
     s += word.substring(i-1,i);
   }
@@ -55,50 +56,13 @@ public String reverse(String str)
   }
   return s;
 }
-  public String noCapitals(String sWord){
-  String s = new String(); 
-  for(int i = 0; i < sWord.length(); i++){
-      char c = sWord.charAt(i);
-    
-    if(Character.isUpperCase(c)){
-      s += Character.toLowerCase(c);
+  public String letters(String str){
+    String s = "";
+    for(int i = 0; i < str.length(); i++){
+      if(character.isLetter(str.charAt(i))){
+        s = s + str.charAt(i);
+      }
     }
-    else{
-      s +=c;
-    }
-  }
-  return s;
-}
-public String noSpaces(String sWord){
-  String s ="";
-  for(int i = 0; i < sWord.length(); i++){
-    char currentChar = sWord.charAt(i);
-  
-    if(currentChar != ' '){
-      s+= currentChar; 
-    
-  }
-}
-return s;
-}
-public int numLetters(String sString){
-  int count = 0;
-  for(int i = 0; i < sString.length(); i++){
-       char currentChar = sString.charAt(i);
-  if(Character.isLetter(currentChar)){
-    count++;
-  }
-}
-return count;
-}
-public String onlyLetters(String sString){
-  String s ="";
-  for(int i = 0; i < sString.length(); i++){
-       char currentChar = sString.charAt(i);
-  if(Character.isLetter(currentChar)){
-    s+=currentChar;
-    }
-  }
-return s;
+    return s;
 }
 }
