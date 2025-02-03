@@ -43,7 +43,7 @@ s = letters(word).toLowerCase();
 for(int i = word.length(); i > 0; i--){
     s += word.substring(i-1,i);
   }
-  if(s.equals(word)){
+  if(s.equals(reverse(word))){
     return true;
   }
   return false;
